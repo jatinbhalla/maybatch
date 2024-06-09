@@ -8,3 +8,8 @@ task1: go through git hub platform
 task2: check what is git hub actions.
 task3: try to configure self hosted agent
 task4: try ssh method to authenticate in git hub
+
+9 june jenkins
+task1: explor jenkins options
+task2: check the differences between items option available in jenkins
+task3: try more types of pipelines and stages in jenkins
