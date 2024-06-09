@@ -1,0 +1,30 @@
+node {
+    try {
+        stage('Build') {
+            echo 'Building...'
+            // Add your build commands here
+            // sh 'mvn clean install' or 'gradle build'
+        }
+
+        stage('Test') {
+            echo 'Testing...'
+            // Add your test commands here
+            // sh 'mvn test' or 'gradle test'
+        }
+
+        stage('Deploy') {
+            echo 'Deploying...'
+            // Add your deployment commands here
+            // sh 'scp target/my-app.jar user@server:/path/to/deploy'
+        }
+    } catch (Exception e) {
+        currentBuild.result = 'FAILURE'
+        throw e
+    } finally {
+        stage('Cleanup') {
+            echo 'Cleaning up...'
+            // Add any cleanup commands here
+            // sh 'rm -rf build'
+        }
+    }
+}
