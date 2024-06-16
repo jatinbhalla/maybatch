@@ -13,3 +13,6 @@ task4: try ssh method to authenticate in git hub
 task1: explor jenkins options
 task2: check the differences between items option available in jenkins
 task3: try more types of pipelines and stages in jenkins
+
+16june
+task1: how to execute powershell script usinh terraform
