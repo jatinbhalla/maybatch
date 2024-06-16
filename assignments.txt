@@ -1,0 +1,4 @@
+Git Assignment 1st JUNE
+task1: try git cheat sheet commands
+task2: check different branching strategies available in market
+task3: try commands discussed in class
