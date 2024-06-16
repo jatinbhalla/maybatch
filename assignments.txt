@@ -16,3 +16,4 @@ task3: try more types of pipelines and stages in jenkins
 
 16june
 task1: how to execute powershell script usinh terraform
+task2: try for each in terraform
