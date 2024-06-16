@@ -1,3 +1,8 @@
+
+resource "random_pet" "prefix" {
+  prefix = var.prefix
+  length = 1
+}
 # Create virtual network
 resource "azurerm_virtual_network" "my_terraform_network" {
   name                = "${random_pet.prefix.id}-vnet"
@@ -70,4 +75,13 @@ resource "azurerm_network_interface" "my_terraform_nic" {
 resource "azurerm_network_interface_security_group_association" "example" {
   network_interface_id      = azurerm_network_interface.my_terraform_nic.id
   network_security_group_id = azurerm_network_security_group.my_terraform_nsg.id
+}
+
+resource "random_id" "random_id" {
+  keepers = {
+    # Generate a new ID only when a new resource group is defined
+    resource_group = var.namerg
+  }
+
+  byte_length = 8
 }
