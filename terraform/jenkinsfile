@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        MY_CRED = credentials('0970fa05-dd2c-415a-92e1-be1a676ff9fe')
+        MY_CRED = credentials('8159c1cf-0174-4844-8647-ccc2bca25819')
     }
     stages {
         stage('Checkout') {
             steps {
                 // Checkout your Git repository
-                git url: 'https://github.com/jatinbhalla/septbatch.git'
+                git url: 'https://github.com/jatinbhalla/maybatch.git'
             }
         }
 
@@ -27,7 +27,7 @@ pipeline {
                 // Apply Terraform changes
                 dir ('/var/lib/jenkins/workspace/terraform/terraform'){
                 script {
-                    withCredentials([azureServicePrincipal(credentialsId: '0970fa05-dd2c-415a-92e1-be1a676ff9fe', variable: '0970fa05-dd2c-415a-92e1-be1a676ff9fe')]) {
+                    withCredentials([azureServicePrincipal(credentialsId: '8159c1cf-0174-4844-8647-ccc2bca25819', variable: '8159c1cf-0174-4844-8647-ccc2bca25819')]) {
                         // Set Azure credentials
                         sh 'az login --service-principal -u $MY_CRED_CLIENT_ID -p $MY_CRED_CLIENT_SECRET -t $MY_CRED_TENANT_ID'
                         sh 'export ARM_CLIENT_ID=$MY_CRED_CLIENT_ID'
