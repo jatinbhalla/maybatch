@@ -17,3 +17,9 @@ task3: try more types of pipelines and stages in jenkins
 16june
 task1: how to execute powershell script usinh terraform
 task2: try for each in terraform
+
+30th june
+task1: revise ansible and try ansible playbooks
+task2: revise docker commands
+task3: try docker sheet commands
+task4: try to setup html or any website using docker
